@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   post '/api_call', to: "api_calls#api_call", as: "/api_call"
 
+  post '/login', to: 'sessions#create', as: '/login'
+
 end
