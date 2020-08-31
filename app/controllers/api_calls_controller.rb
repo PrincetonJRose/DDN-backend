@@ -1,7 +1,7 @@
 class ApiCallsController < ApplicationController
 
     def api_call
-        @data = JSON.parse(RestClient.get("https://www.dnd5eapi.co#{api_params[:url]}"))
+        @data = JSON.parse(RestClient.get("https://www.dnd5eapi.co/api/#{api_params[:url]}"))
         if @data
             render json: @data, status: :ok
         else
